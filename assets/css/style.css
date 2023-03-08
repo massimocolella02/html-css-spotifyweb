@@ -222,6 +222,83 @@ footer{
     border-radius: 50%;
 }
 
+/* Footer */
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+}
+footer .container > div:first-child{
+    display: flex;
+    align-items: center;
+}
+footer .container > div ul li{
+    display: inline-block;
+    margin-right: 0.5em;
+}
+footer .container > div:first-child >*{
+    margin-right: 0.5em;
+}
+footer .container > div:first-child div span{
+    font-weight: bold;
+}
+footer .container > div:first-child div span:first-child{
+    color: white;
+    font-size: 1.1rem;
+}
+footer .container > div:nth-child(2){
+    width: 30%;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.icon span,
+.hr span,
+#hr2{
+    display: inline;
+    color: white;
+    margin-right: 1em;
+}
+.fa-circle-play{
+    font-size: 1.5rem;
+}
+.hr{
+    display: flex;
+    align-items: center;
+}
+#hr1{
+    width: 30%;
+    height: 2px;
+    border: 2px solid white;
+}
+#hr2{
+    width: 70%;
+    height: 2px;
+    border: 2px solid #676767;
+}
+
+footer .container > div:last-child{
+    display: flex;
+    align-items: center;
+}
+footer .container > div:last-child >*{
+    margin-right: 1em;
+    color: white;
+}
+.volume{
+    width: 80px;
+}
+#hr3{
+    width: 30%;
+    border: 2px solid white;
+}
+#hr4{
+    width: 70%;
+    border: 2px solid #676767;
+}
+
 @media screen and (max-width: 425px) {
     /* Sidebar */
     .sidebar{
