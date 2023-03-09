@@ -226,77 +226,233 @@ footer{
 footer .container{
     display: flex;
     justify-content: space-between;
+    color: white;
+    margin: 0 auto;
     height: 80px;
 }
 footer .container > div:first-child{
     display: flex;
     align-items: center;
 }
-footer .container > div ul li{
-    display: inline-block;
-    margin-right: 0.5em;
+footer .container > div:first-child img{
+    display: block;
 }
-footer .container > div:first-child >*{
-    margin-right: 0.5em;
+footer .container > div:first-child > *{
+    margin-left: 0.5em;
 }
-footer .container > div:first-child div span{
-    font-weight: bold;
+.fa-heart{
+    margin-right: 0.2em;
 }
-footer .container > div:first-child div span:first-child{
-    color: white;
-    font-size: 1.1rem;
-}
-footer .container > div:nth-child(2){
-    width: 30%;
-    color: white;
+.icon{
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    margin: 0.7em 0;
 }
-.icon span,
-.hr span,
-#hr2{
-    display: inline;
-    color: white;
+.icon i{
     margin-right: 1em;
 }
-.fa-circle-play{
-    font-size: 1.5rem;
+.fa-play{
+    font-size: 1.4rem;
 }
-.hr{
+.range{
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.range span:first-child{
+    margin-right: 0.5em;
+    color: white;
+}
+.range span:last-child{
+    margin-left: 0.5em;
+    color: white;
+}
+/*********** Baseline, reset styles ***********/
+.range input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 20rem;
+  }
+  
+  /* Removes default focus */
+  .range input[type="range"]:focus {
+    outline: none;
+  }
+  
+  /******** Chrome, Safari, Opera and Edge Chromium styles ********/
+  /* slider track */
+  .range input[type="range"]::-webkit-slider-runnable-track {
+    background-color: #5a5a5a;
+    border-radius: 0.5rem;
+    height: 0.3rem;
+  }
+  
+  /* slider thumb */
+  .range input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    margin-top: 0px;  /* Centreres thumb on the track */
+    background-color: #c1c1c1;
+    border-radius: 0.5rem;
+    height: 0.3rem;
+    width: 5.5rem;
+  }
+  
+  .range input[type="range"]:focus::-webkit-slider-thumb {
+    outline: 3px solid #c1c1c1;
+    outline-offset: 0.125rem;
+  }
+  
+  /*********** Firefox styles ***********/
+  /* slider track */
+  .range input[type="range"]::-moz-range-track {
+    background-color: #5a5a5a;
+    border-radius: 0.5rem;
+    height: 0.3rem;
+  }
+  
+  /* slider thumb */
+  .range input[type="range"]::-moz-range-thumb {
+    background-color: #c1c1c1;
+    border: none; /*Removes extra border that FF applies*/
+    border-radius: 0.5rem;
+    height: 0.3rem;
+    width: 5.5rem;
+  }
+  
+  .range input[type="range"]:focus::-moz-range-thumb{
+    outline: 3px solid #c1c1c1;
+    outline-offset: 0.125rem;
+  }
+
+
+.volume{
     display: flex;
     align-items: center;
 }
-#hr1{
-    width: 30%;
-    height: 2px;
-    border: 2px solid white;
-}
-#hr2{
-    width: 70%;
-    height: 2px;
-    border: 2px solid #676767;
+.volume > *{
+    margin-right: 0.5em;
 }
 
-footer .container > div:last-child{
-    display: flex;
-    align-items: center;
+  /*********** Baseline, reset styles ***********/
+.volume input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 7rem;
+  }
+  
+  /* Removes default focus */
+.volume input[type="range"]:focus {
+    outline: none;
+  }
+  
+  /******** Chrome, Safari, Opera and Edge Chromium styles ********/
+  /* slider track */
+.volume input[type="range"]::-webkit-slider-runnable-track {
+    background-color: #5a5a5a;
+    border-radius: 0.5rem;
+    height: 0.3rem;
+  }
+  
+  /* slider thumb */
+.volume input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    margin-top: 0px; /* Centers thumb on the track */
+    background-color: #c1c1c1;
+    border-radius: 0.5rem;
+    height: 0.3rem;
+    width: 1.5rem;
+  }
+  
+.volume input[type="range"]:focus::-webkit-slider-thumb {
+    outline: 3px solid #c1c1c1;
+    outline-offset: 0.125rem;
+  }
+  
+  /*********** Firefox styles ***********/
+  /* slider track */
+.volume input[type="range"]::-moz-range-track {
+    background-color: #5a5a5a;
+    border-radius: 0.5rem;
+    height: 0.3rem;
+  }
+  
+  /* slider thumb */
+.volume input[type="range"]::-moz-range-thumb {
+    background-color: #c1c1c1;
+    border: none; /*Removes extra border that FF applies*/
+    border-radius: 0.5rem;
+    height: 0.3rem;
+    width: 1.5rem;
+  }
+  
+.volume input[type="range"]:focus::-moz-range-thumb{
+    outline: 3px solid #c1c1c1;
+    outline-offset: 0.125rem;
+  }
+
+@media screen and (max-width: 768px) {
+    .cards > div{
+        flex-basis: calc(100% / 4 - 1rem);
+    }
+    .recently-cards{
+        justify-content:left;
+    }
+    .recently-cards > div{
+        margin-right: 1em;
+    }
+    .recently-cards > div:nth-child(4){
+        margin-right: 0;
+    }
+
+    footer .container > div:first-child img{
+        width: 40px;
+    }
+    footer .container .fa-heart{
+        display: block;
+    }
+    .range input[type="range"] {
+        width: 5rem;
+    }
+    .range input[type="range"]::-webkit-slider-thumb {
+        width: 1.5rem;
+    }
+    .range span:first-child{
+        margin-right: 0.5em;
+        color: white;
+    }
+    .icon{
+        text-align: center;
+        margin: 0.7em 0;
+    }
+    .icon i{
+        margin-right: 0.5em;
+    }
+    .range span:last-child{
+        margin-left: 0.5em;
+        color: white;
+    }
+
+    footer .container .volume .fa-volume-high,
+    footer .container .volume-range{
+        display: none;
+    }
+
+    .volume{
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
 }
-footer .container > div:last-child >*{
-    margin-right: 1em;
-    color: white;
-}
-.volume{
-    width: 80px;
-}
-#hr3{
-    width: 30%;
-    border: 2px solid white;
-}
-#hr4{
-    width: 70%;
-    border: 2px solid #676767;
+
+@media screen and (max-width: 639px){
+    .cards > div{
+        flex-basis: calc(100% / 2 - 1rem);
+    }
 }
 
 @media screen and (max-width: 425px) {
@@ -307,4 +463,5 @@ footer .container > div:last-child >*{
     .sidebar2{
         display:flex;
     }
+    
 }
